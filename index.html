@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Task </title>
+</head>
+<body>
+    <h2> Tasks </h2>
+    <h3>Example JSON</h3>
+    {<br>
+        "users": [<br>
+          {<br>
+            "id": 1,<br>
+            "name": "John Doe",<br>
+            "age": 30<br>
+          },<br>
+          {<br>
+            "id": 2,<br>
+            "name": "Jane Doe",<br>
+            "age": 25<br>
+          }<br>
+        ]<br>
+      }<br>
+
+      <h4> USING For LOOP </h4>
+      
+      <h4>Accessing the "users" array in the JSON</h4>
+      var usersArray = jsonData.users;
+    <br>
+      <h4>Using a for loop to iterate through the array</h4>
+      for (var i = 0; i < usersArray.length; i++) {<br>
+        var user = usersArray[i];<br>
+        <h4>Accessing individual properties of each user</h4>
+        var userId = user.id;<br>
+        var userName = user.name;<br>
+        var userAge = user.age;<br>
+        <h4>Printing or using the user information</h4>
+        console.log("User ID: " + userId);<br>
+        console.log("User Name: " + userName);<br>
+        console.log("User Age: " + userAge);<br>
+      }
+      <h4> USING For In LOOP </h4>
+      <h4>Accessing the "users" array in the JSON</h4>
+var usersArray = jsonData.users;
+
+<h4>Using a for...in loop to iterate through the array</h4>
+for (var index in usersArray) {
+  <h4>Accessing individual user object</h4>
+  var user = usersArray[index];
+
+  <h4>Using another for...in loop to iterate through the properties of each user</h4>
+  for (var property in user) {
+    <h4>Accessing individual properties of each user</h4>
+    var value = user[property];
+
+    <h4>Printing or using the user information</h4>
+    console.log(property + ": " + value);
+  }
+
+  <h4>Adding a separator for better readability</h4>
+  console.log("--------------");
+
+  <h4> USING For of LOOP </h4>
+  <h4>Accessing the "users" array in the JSON</h4>
+var usersArray = jsonData.users;
+
+<h4>Using a for...of loop to iterate through the array</h4>
+for (var user of usersArray) {
+  <h4>Accessing individual user object</h4>
+  <h4>'user' variable now contains the current user object</h4>
+  <h4>You can access its properties directly</h4>
+  console.log("User ID: " + user.id);<br>
+  console.log("User Name: " + user.name);<br>
+  console.log("User Age: " + user.age);<br>
+  console.log("--------------");<br>
+
+  <h4> USING For Each LOOP </h4>
+  <h4>Accessing the "users" array in the JSON</h4>
+var usersArray = jsonData.users;
+
+<h4>Using forEach method to iterate through the array</h4>
+usersArray.forEach(function(user) {
+  <h4>Accessing individual user object</h4>
+  <h4>'user' variable now contains the current user object</h4>
+  <h4>You can access its properties directly</h4>
+  console.log("User ID: " + user.id);<br>
+  console.log("User Name: " + user.name);<br>
+  console.log("User Age: " + user.age);<br>
+  console.log("--------------");<br>
+
+<h3> Create Your own resume data in JSON Format </h3>
+
+  {
+    "name": "Karan R",<br>
+    "contact": {<br>
+      "email": "karanravitvr@gmail.com",<br>
+      "phone": "+91 **********",<br>
+      "address": "123 ABC Street, Bangalore 560066"<br>
+    },<br>
+    "summary": "Having 7+ Years experience in US IT Staffing.",<br>
+    "education": [<br>
+      {<br>
+        "degree": "Bachelor of Educatio in Mechanical Engineer",<br>
+        "College": "Anna University",<br>
+        "graduation_year": 2015<br>
+      }<br>
+    ],<br>
+    "experience": [<br>
+      {<br>
+        "title": "Account Manager",<br>
+        "company": "*** Technology Inc.",<br>
+        "location": "Bangalore, India",<br>
+        "start_date": "2018-11-06",<br>
+        "end_date": "Till Date",<br>
+        "responsibilities": [<br>
+          "Lead a team of 20 members, handling the hot clients in 3 different time zones .",<br>
+          
+        ]<br>
+      },<br>
+      {<br>
+        "title": "Senior Technical Recruiter",<br>
+        "company": "*** Technology LLC.",<br>
+        "location": "Bangalore, India",<br>
+        "start_date": "2016-06-01",<br>
+        "end_date": "2018-01-06",<br>
+        "responsibilities": [<br>
+          "Contributed to the development of a customer management system.",<br>
+          
+        ]<br>
+      }<br>
+    ],<br>
+  }
+</body>
+</html>
